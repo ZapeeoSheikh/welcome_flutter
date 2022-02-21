@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:welcome_flutter/routes.dart';
+
 class LoginApp extends StatefulWidget {
   const LoginApp({Key? key}) : super(key: key);
 
@@ -11,6 +12,7 @@ class _LoginAppState extends State<LoginApp> {
   @override
   Widget build(BuildContext context) {
     String name = "";
+    // bool changeButton = false;
     return Material(
       child: Scaffold(
         backgroundColor: Colors.white,
@@ -30,19 +32,20 @@ class _LoginAppState extends State<LoginApp> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.symmetric(vertical: 20.0, horizontal: 40.0),
+                padding: const EdgeInsets.symmetric(
+                    vertical: 20.0, horizontal: 40.0),
                 child: Column(
                   children: [
                     TextFormField(
                       decoration: InputDecoration(
-                        // border: UnderlineInputBorder(),
+                        border: UnderlineInputBorder(),
                         labelText: 'Username',
                         hintText: 'Enter username',
                         labelStyle: TextStyle(
                           color: Colors.blueAccent,
                         ),
                       ),
-                      onChanged: (value){
+                      onChanged: (value) {
                         name = value;
                         setState(() {});
                       },
@@ -50,7 +53,7 @@ class _LoginAppState extends State<LoginApp> {
                     TextFormField(
                       obscureText: true,
                       decoration: InputDecoration(
-                        // border: UnderlineInputBorder(),
+                        border: UnderlineInputBorder(),
                         labelText: 'Password',
                         hintText: 'Enter password',
                         labelStyle: TextStyle(
@@ -82,9 +85,6 @@ class _LoginAppState extends State<LoginApp> {
   }
 }
 
-
-
-
 // import 'package:flutter/material.dart';
 // // import 'package:flutter_catalog/utils/routes.dart';
 //
@@ -97,7 +97,8 @@ class _LoginAppState extends State<LoginApp> {
 //
 //   @override
 //   Widget build(BuildContext context) {
-// //     return Material(
+// //     return
+// Material(
 //         color: Colors.white,
 //         child: SingleChildScrollView(
 //           child: Column(

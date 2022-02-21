@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:welcome_flutter/login.dart';
+
 import 'routes.dart';
-import 'signup.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
